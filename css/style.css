@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; background: #0a0d1a; color: #fff; margin:0; padding:0; }
+header { background:#111; padding:10px; display:flex; justify-content:space-between; align-items:center; }
+h1 { margin:0; font-size:18px; }
+.tabs { display:flex; gap:10px; background:#222; padding:10px; }
+.tab { padding:6px 12px; background:#333; cursor:pointer; border-radius:4px; }
+.tab.active { background:#555; color:#0f0; }
+.card { background:#171a2b; padding:10px; margin:10px; border-radius:6px; }
+table { width:100%; border-collapse:collapse; }
+th, td { border-bottom:1px solid #333; padding:6px; text-align:left; }
+.up { color:#0f0; }
+.down { color:#f00; }
+button { padding:4px 10px; cursor:pointer; border-radius:4px; }
+.green { background:#0f2b1d; color:#0f0; }
+.red { background:#2b0f16; color:#f00; }
+.trade-controls { display:flex; gap:8px; align-items:center; margin-bottom:8px; flex-wrap:wrap; }
+
+/* Price arrows */
+.arrow-up::before { content: "▲ "; color:#0f0; font-weight:bold; }
+.arrow-down::before { content: "▼ "; color:#f00; font-weight:bold; }
