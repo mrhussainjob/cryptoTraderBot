@@ -58,7 +58,7 @@
     function renderOpen(){ const tb=$('#posOpen tbody'); tb.innerHTML=''; let tot=0;
       state.positions.forEach(p=>{ const pnl=(p.current-p.entry)*p.qty; p.pnl=pnl; tot+=pnl;
         const col=pnl>=0?'up':'down';
-        tb.innerHTML+=`<tr><td>${p.id}</td><td>${p.sym}</td><td>${p.strategy}</td><td>${fmtNum(p.amount,2)}</td><td>${fmtNum(p.entry,2)}</td><td>${fmtNum(p.current,2)}</td><td class="${col}">${fmtNum(pnl,2)}</td><td><button class="red" data-close="${p.id}">Sell</button></td></tr>`;
+        tb.innerHTML+=`<tr><td>${p.id}</td><td>${p.sym}</td><td>${p.strategy}</td><td>${fmtNum(p.amount,2)}</td><td>${fmtNum(p.entry,2)}</td><td>${fmtNum(p.current,2)}</td><td class="${col}">${fmtNum(p.pnl,2)}</td><td><button class="red" data-close="${p.id}">Sell</button></td></tr>`;
       });
       $('#openTot').textContent=fmtNum(tot,2);
       tb.querySelectorAll('button[data-close]').forEach(b=>b.onclick=()=>closePos(+b.dataset.close));
